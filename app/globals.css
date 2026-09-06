@@ -22,3 +22,10 @@ body,button,input,select,textarea{font-family:"Noto Sans Myanmar","Pyidaungsu","
 body{letter-spacing:.018em;word-spacing:.06em;line-height:1.9}
 .hero h1,.story h2,.sectionTitle h2,.visit h2,.drawer h2,.modal h2,.tracker h2,.adminContent h1,.adminLogin h1{font-family:"Noto Sans Myanmar","Pyidaungsu","Myanmar Text","Myanmar Sangam MN",sans-serif!important;letter-spacing:.012em;line-height:1.42}
 .product h3,.product p,.cartLine,.modal,.toast,.adminContent,.adminLogin{letter-spacing:.014em;line-height:1.85}
+
+/* Warm, airy Myanmar typography for Happy Coffee. */
+body,button,input,select,textarea{font-family:"Padauk","Noto Sans Myanmar","Pyidaungsu","Myanmar Text",sans-serif!important;font-weight:400;letter-spacing:.012em;word-spacing:.045em;line-height:1.95}
+.hero h1,.story h2,.sectionTitle h2,.visit h2,.drawer h2,.modal h2,.tracker h2,.adminContent h1,.adminLogin h1{font-family:"Padauk","Noto Sans Myanmar","Pyidaungsu","Myanmar Text",sans-serif!important;font-weight:700;letter-spacing:.005em;line-height:1.5}
+.logo b{font-family:"Playfair Display",Georgia,serif!important;font-size:20px;font-weight:700;letter-spacing:.035em}
+.heroContent>p,.story p,.sectionTitle>p,.product p,.cartLine,.modal,.toast{line-height:2}
+@media(max-width:720px){.logo b{font-size:17px}.hero h1,.story h2,.sectionTitle h2,.visit h2{line-height:1.45}}
