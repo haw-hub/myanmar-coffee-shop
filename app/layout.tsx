@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ယုံကြည် ကော်ဖီ | Myanmar Coffee House",
+  title: "Happy Coffee | Myanmar Coffee House",
   description: "မြန်မာ့တောင်တန်းဒေသမှ လတ်ဆတ်သော ကော်ဖီစေ့များဖြင့် ဖျော်ထားသော ကော်ဖီ။",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="my"><body>{children}</body></html>;
+  return <html lang="my"><head><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" /></head><body>{children}</body></html>;
 }

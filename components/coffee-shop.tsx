@@ -144,7 +144,7 @@ export default function CoffeeShop() {
 
   return <main>
     <header className="header">
-      <a className="logo" href="#home"><span>☕</span><b>ယုံကြည် ကော်ဖီ</b></a>
+      <a className="logo" href="#home"><span>☕</span><b>Happy Coffee</b></a>
       <button className="menuButton" onClick={() => setNavOpen(!navOpen)} aria-label="Menu">☰</button>
       <nav className={navOpen ? "open" : ""}>
         <a onClick={() => setNavOpen(false)} href="#home">{words.home}</a><a onClick={() => setNavOpen(false)} href="#story">{words.story}</a><a onClick={() => setNavOpen(false)} href="#menu">{words.menu}</a><a onClick={() => setNavOpen(false)} href="#visit">{words.visit}</a>
@@ -159,7 +159,7 @@ export default function CoffeeShop() {
     <section id="menu" className="section menuSection"><div className="sectionTitle"><p className="eyebrow dark">OUR MENU</p><h2>မီနူးစာရင်း</h2><p>Myanmar မှာ စိုက်ပျိုးပြီး Myanmar အရသာနဲ့ ဖျော်ထားပါတယ်။</p><span className="menuNote">☕ နေ့စဉ် လတ်ဆတ်စွာ ဖျော်ထားပါသည်</span></div><div className="categories"><button className={category === "all" ? "selected" : ""} onClick={() => setCategory("all")}>{words.all}</button>{categories.map((item) => <button key={item.id} className={category === item.id ? "selected" : ""} onClick={() => setCategory(item.id)}>{language === "my" ? item.name_my : item.name_en}</button>)}</div><div className="productGrid">{filtered.map((item, index) => { const soldOut = !isProductOrderable(item); return <article className={`product ${soldOut ? "soldOut" : ""}`} key={item.id} style={{ "--card-delay": `${index * 45}ms` } as React.CSSProperties}><div className="productIcon">{item.emoji}</div><div className="productBody"><div className="productTitle"><h3>{language === "my" ? item.name_my : item.name_en}</h3>{soldOut ? <span className="soldOutBadge">ကုန်ပြီ</span> : (language === "my" ? item.tag_my : item.tag_en) && <span>{language === "my" ? item.tag_my : item.tag_en}</span>}</div><p>{language === "my" ? item.desc_my : item.desc_en}</p><div className="productFoot"><b>{money(item.price_kyat)}</b><button disabled={soldOut} onClick={() => add(item)} aria-label={soldOut ? "ကုန်ပြီ" : words.add}>{soldOut ? "—" : "＋"}</button></div></div></article>; })}</div></section>
 
     <section id="visit" className="visit"><div><p className="eyebrow">VISIT US</p><h2>Yangon မြို့လယ်မှာ<br />လာရောက်လည်ပတ်ပါ</h2><p>📍 No. 42, Bogyoke Road, Dagon Township, Yangon</p><p>🕐 နေ့စဉ် 7:00 AM – 9:00 PM</p><p>📞 +95 9 25 555 8888</p></div><a className="button primary" href="https://maps.google.com/?q=Yangon+Myanmar" target="_blank">မြေပုံဖွင့်ရန်</a></section>
-    <footer>© {new Date().getFullYear()} ယုံကြည် ကော်ဖီ · Myanmar Coffee House</footer>
+    <footer>© {new Date().getFullYear()} Happy Coffee · Myanmar Coffee House</footer>
 
     {message && <div className="toast" role="status">{message}<button onClick={() => setMessage("")}>×</button></div>}
     {trackerOpen && trackedOrder && <div className="tracker"><button className="modalClose" onClick={() => setTrackerOpen(false)}>×</button><p className="eyebrow dark">ORDER TRACKING · AUTO UPDATE</p><h2>သင့်မှာယူမှု</h2><b className="trackingNumber">{trackedOrder.orderNumber}</b><div className={`trackingStatus ${trackedOrder.status}`}>{orderStatusLabels[trackedOrder.status] ?? trackedOrder.status}</div><p>အခြေအနေကို ၁၀ စက္ကန့်တိုင်း အလိုအလျောက် update လုပ်ပေးပါသည်။</p>{trackedOrder.totalKyat && <p><b>စုစုပေါင်း:</b> {money(trackedOrder.totalKyat)}</p>}</div>}

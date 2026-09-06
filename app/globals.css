@@ -16,3 +16,9 @@
 .soldOutBadge{background:#f3ddd5!important;color:#914837!important}
 .productFoot button:disabled,.productFoot button:disabled:hover{cursor:not-allowed;background:#c9bcad;box-shadow:none;transform:none}
 .quantity button:disabled{cursor:not-allowed;opacity:.45}
+
+/* Clear, well-spaced Myanmar text with a loaded web font for every device. */
+body,button,input,select,textarea{font-family:"Noto Sans Myanmar","Pyidaungsu","Myanmar Text","Myanmar Sangam MN",sans-serif!important;font-synthesis:none}
+body{letter-spacing:.018em;word-spacing:.06em;line-height:1.9}
+.hero h1,.story h2,.sectionTitle h2,.visit h2,.drawer h2,.modal h2,.tracker h2,.adminContent h1,.adminLogin h1{font-family:"Noto Sans Myanmar","Pyidaungsu","Myanmar Text","Myanmar Sangam MN",sans-serif!important;letter-spacing:.012em;line-height:1.42}
+.product h3,.product p,.cartLine,.modal,.toast,.adminContent,.adminLogin{letter-spacing:.014em;line-height:1.85}
