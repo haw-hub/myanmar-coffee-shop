@@ -29,3 +29,11 @@ body,button,input,select,textarea{font-family:"Padauk","Noto Sans Myanmar","Pyid
 .logo b{font-family:"Playfair Display",Georgia,serif!important;font-size:20px;font-weight:700;letter-spacing:.035em}
 .heroContent>p,.story p,.sectionTitle>p,.product p,.cartLine,.modal,.toast{line-height:2}
 @media(max-width:720px){.logo b{font-size:17px}.hero h1,.story h2,.sectionTitle h2,.visit h2{line-height:1.45}}
+
+/* Refined pairing: clear Burmese text, with a graceful editorial voice for headings. */
+body,button,input,select,textarea{font-family:"Noto Sans Myanmar","Pyidaungsu","Myanmar Text",sans-serif!important;font-weight:400;letter-spacing:.008em;word-spacing:.025em;line-height:1.9}
+.hero h1,.story h2,.sectionTitle h2,.visit h2,.drawer h2,.modal h2,.tracker h2,.adminContent h1,.adminLogin h1{font-family:"Noto Serif Myanmar","Noto Sans Myanmar","Pyidaungsu",serif!important;font-weight:600;letter-spacing:.01em;line-height:1.58}
+.logo b{font-family:"DM Serif Display",Georgia,serif!important;font-size:22px;font-weight:400;letter-spacing:.025em}
+.eyebrow{letter-spacing:.17em;font-weight:700}.heroContent>p,.story p,.sectionTitle>p,.product p,.cartLine,.modal,.toast{line-height:1.95}
+.product h3,.productFoot b,.stats b{font-family:"Noto Serif Myanmar","Noto Sans Myanmar","Pyidaungsu",serif!important;font-weight:600}
+@media(max-width:720px){.logo b{font-size:19px}.hero h1,.story h2,.sectionTitle h2,.visit h2{line-height:1.5}}
